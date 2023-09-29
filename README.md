@@ -25,6 +25,7 @@ If you wish to participate in the tutorials, please run through these instructio
 - You can test whether mne is currently working in Spyder by running `import mne` in the Spyder console.
   - (Note: If the Spyder console gives an error saying "your python environment doesn't have the `spyder-kernels` module...", you can install the required version of the spyder kernel by opening a new "Anaconda Prompt (anaconda3)", running `conda activate MNE-EEG`, and installing the correct version `conda install -n MNE-EEG spyder-kernels=...`, replacing the `...` with the version as listed by Spyder. ![afbeelding](https://github.com/eeg-ugent/Ghent_CuttingGardens2023/assets/36112808/0b3efcff-a78a-4bf7-af11-4786025f69c2)
 
-
+### 2.3 Download datasets
+- ...
 
 
