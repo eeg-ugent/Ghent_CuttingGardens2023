@@ -10,6 +10,7 @@ If you wish to participate in the tutorials, please run through these instructio
 - We will create a dedicated environment for using MNE. You can do this by running `conda create -n MNE-EEG python=3.11`. You can replace the name `MNE-EEG` with whatever you want. We will use Python 3.11, which is the latest version of python at the time of writing. This will quickly install some basic packages and ask you for permission to do so by showing `Proceed ([y]/n)?`. You can continue by running the letter `y`.
 - Activate this new environment by running `conda activate MNE-EEG`. The `(base)` you could see before each line in your terminal should now have switched to saying `(MNE-EEG)`. 
 - MNE has a lot of "dependencies", which are other packages you need to have before MNE can work. We will first install an efficient package manager called "mamba" that will help us install the dependencies of MNE very quickly. You can install this by running `conda install --channel=conda-forge --name=base mamba`.
+  - (Note: Some recent issues with anaconda which I ran into myself can give you an error "OpenSSL appears to be unavailable on this machine". The solution can be found [here](https://github.com/conda/conda/issues/11795#issuecomment-1680167888).)
 - Then, install MNE by running `mamba create --override-channels --channel=conda-forge --name=MNE-EEG mne`.
 
 ### 2.2. Run MNE in Spyder
