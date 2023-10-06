@@ -13,15 +13,12 @@ If you wish to participate in the tutorials, please run through these instructio
 This is not the Anaconda Navigator! The Anaconda Prompt should open a command terminal where you can type basic commands.
 - We will create a dedicated environment for using MNE. You can do this by running `conda create -n MNE-EEG python=3.9`. You can replace the name `MNE-EEG` with whatever you want. We will use Python 3.9, which is not the latest version but is stable with most packages we will be using. Anaconda will quickly install some basic packages and ask you for permission to do so by showing `Proceed ([y]/n)?`. You can continue by running the letter `y`.
 - Activate this new environment by running `conda activate MNE-EEG`. The `(base)` you could see before each line in your terminal should now have switched to saying `(MNE-EEG)`. 
-- Install MNE and all its core dependencies into this new environment by running `conda install -n MNE-EEG mne-base`.
+- Install MNE and all its core dependencies into this new environment by running `conda install -n MNE-EEG -c conda-forge mne-base`.
   - (Note: Some recent issues with anaconda which I ran into myself can give you an error "OpenSSL appears to be unavailable on this machine". The solution can be found [here](https://github.com/conda/conda/issues/11795#issuecomment-1680167888).)
-  - (Note: You might get this error: PackagesNotFoundError: The following packages are not available from current channels:
-    mne-base </br>
-    In that case you can try with: `conda install -n MNE-EEG mne-base --channel=conda-forge`
 
 ### 2.2. Run MNE in Spyder
 - During our tutorials, we will be using [Spyder](https://www.spyder-ide.org/), which is an "integrated development environment (IDE)". An IDE allows you to easily write long scripts, while executing code on the fly, and visualizing data currently loaded in memory. This is very convenient when working with EEG data.
-- To make our MNE-EEG environment work in Spyder, we have to install the relevant "spyder kernel" in our environment. You can do this by opening a new "Anaconda Prompt (anaconda3)" terminal. Then, navigate to the MNE-EEG environment by running `conda activate MNE-EEG`. We can install the kernel by running `conda install -n MNE-EEG spyder-kernels=2.1`.
+- To make our MNE-EEG environment work in Spyder, we have to install the relevant "spyder kernel" in our environment. You can do this by opening a new "Anaconda Prompt (anaconda3)" terminal. Then, navigate to the MNE-EEG environment by running `conda activate MNE-EEG`. We can install the kernel by running `conda install -n MNE-EEG -c conda-forge spyder-kernels=2.1`.
 - The actual spyder program itself is installed automatically in the `(base)` environment. We can open it by navigating back to base by running `conda activate base` and then running `spyder`.
   - When you want to open spyder in the future, you can open a new "Anaconda Prompt (anaconda3)" terminal. Make sure you are in the `(base)` environment, otherwise run `conda activate base`. From there, you can always open spyder by running `spyder`.
 - We have to select the MNE-EEG environment in order to be able to use mne within Spyder:
@@ -29,8 +26,10 @@ This is not the Anaconda Navigator! The Anaconda Prompt should open a command te
   - Select the MNE-EEG environment as the python interpreter by selecting "Use the following Python interpreter:" and from the dropdown menu, select the option saying "MNE-EEG". ![afbeelding](https://github.com/eeg-ugent/Ghent_CuttingGardens2023/assets/36112808/5226f8c1-d702-43f9-8738-a9569e29f7de)
   - Click on "Apply" and then "OK".
   - Close and reopen Spyder.
+    - If the "MNE-EEG" interpreter does not show up in the dropdown menu, you can click on the paper "select file" icon. Then, navigate to where anaconda3 has installed the "MNE-EEG" environment, select "python.exe", and click "open". ![afbeelding](https://github.com/eeg-ugent/Ghent_CuttingGardens2023/assets/36112808/11ac2eea-e7b0-4462-ab5d-7038063a9abc)
+
 - You can test whether mne is currently working in Spyder by running `import mne` in the Spyder console.
-  - (Note: If the Spyder console gives an error saying "your python environment doesn't have the `spyder-kernels` module...", you can install the required version of the spyder kernel by opening a new "Anaconda Prompt (anaconda3)", running `conda activate MNE-EEG`, and installing the correct version `conda install -n MNE-EEG spyder-kernels=...`, replacing the `...` with the version as listed by Spyder. ![afbeelding](https://github.com/eeg-ugent/Ghent_CuttingGardens2023/assets/36112808/0b3efcff-a78a-4bf7-af11-4786025f69c2)
+  - (Note: If the Spyder console gives an error saying "your python environment doesn't have the `spyder-kernels` module...", you can install the required version of the spyder kernel by opening a new "Anaconda Prompt (anaconda3)", running `conda activate MNE-EEG`, and installing the correct version `conda install -n MNE-EEG spyder-kernels=...`, replacing the `...` with the version as listed by Spyder.) ![afbeelding](https://github.com/eeg-ugent/Ghent_CuttingGardens2023/assets/36112808/0b3efcff-a78a-4bf7-af11-4786025f69c2)
 
 ### 2.3 Download datasets
 - ...
